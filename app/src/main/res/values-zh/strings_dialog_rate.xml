@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="dialog_suggest_title">你喜欢生命游戏吗？</string>
+	<string name="dialog_suggest_body">您会向朋友/同事推荐该应用程序吗？</string>
+
+	<string name="dialog_rate_title">你喜欢生命游戏吗？</string>
+	<string name="dialog_rate_body">您能花点时间评价一下该应用程序吗？感谢您的反馈。谢谢！</string>
+	<string name="dialog_rate_rate">给应用评分</string>
+	<string name="dialog_rate_later">稍后</string>
+	<string name="dialog_rate_no_thanks">不，谢谢</string>
+</resources>

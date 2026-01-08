@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="dialog_change_rules_title">变更规则</string>
+	<string name="dialog_change_rules_generic_description">设置一个活细胞需要多少个活邻居才能生存，或者需要多少个死邻居才能变得活起来，或者从预设中选择一个规则。 </string>
+	<string name="dialog_change_rules_presets">预设</string>
+	<string name="dialog_change_rules_type">类型</string>
+	<string name="dialog_change_rules_info">信息</string>
+	<string name="dialog_change_rules_survival_description">生存规则</string>
+	<string name="dialog_change_rules_creation_description">创建规则</string>
+</resources>

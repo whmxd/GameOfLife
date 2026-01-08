@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="preset_type_stable">稳定</string>
+	<string name="preset_type_expanding">扩展</string>
+	<string name="preset_type_exploding">爆炸</string>
+	<string name="preset_type_chaotic">混沌</string>
+
+	<string name="preset_type_stable_description">稳定规则中的人物很少交互。您可能需要绘制更大的斑点，或连接多个斑点以查看它们的发展。</string>
+	<string name="preset_type_expanding_description">为了获得最佳结果，请从空字段开始，并在开始模拟之前绘制一些活细胞。对于某些规则，您可能需要绘制更大的斑点，或连接多个斑点以查看它们的发展。</string>
+	<string name="preset_type_exploding_description">为了获得最佳结果，请从空字段开始，并在开始模拟之前仅绘制一两个活细胞。有些规则（如记忆）以简单的形状或字母作为起始模式效果最好。</string>
+	<string name="preset_type_chaotic_description">为了获得最佳结果，请使用随机生成器来初始化模拟。您可能需要与该字段进行交互，否则一段时间后可能不会有更多交互。</string>
+
+	<string name="preset_pick_one">- 选择一个 -</string>
+	<string name="preset_custom">自定义</string>
+	<string name="preset_life">生活</string>
+	<string name="preset_sponge_cells">海绵细胞</string>
+	<string name="preset_slowly_growing_fizz">缓慢增长的嘶嘶声</string>
+	<string name="preset_drills">练习</string>
+	<string name="preset_condensation">冷凝</string>
+	<string name="preset_seeds">种子</string>
+	<string name="preset_spread">传播</string>
+
+	<string name="preset_high_life" translatable="false">HighLife</string>
+	<string name="preset_maze">迷宫</string>
+	<string name="preset_amoeba">阿米巴</string>
+	<string name="preset_diamoeba">迪亚莫巴</string>
+	<string name="preset_memory">内存</string>
+	<string name="preset_coral">珊瑚</string>
+</resources>
