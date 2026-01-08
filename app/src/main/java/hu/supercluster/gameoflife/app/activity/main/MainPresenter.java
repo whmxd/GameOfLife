@@ -31,7 +31,6 @@ import hu.supercluster.gameoflife.game.manager.GameParamsBuilder;
 import hu.supercluster.gameoflife.game.rule.NeighborCountBasedRule;
 import hu.supercluster.gameoflife.game.visualization.cell.SimpleCellColors;
 import hu.supercluster.gameoflife.util.EventBus;
-import hugo.weaving.DebugLog;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -158,37 +157,31 @@ public class MainPresenter {
         dialogFragment.show(activity.getFragmentManager(), "rules");
     }
 
-    @DebugLog
     @Subscribe
     public void onRulesChanged(NeighborCountBasedRule rule) {
         gameManager.getAutomaton().setRule(rule);
     }
 
-    @DebugLog
     @Subscribe
     public void onEvent(SuggestDialogYesEvent event) {
         ratingHelper.displayRatingDialog();
     }
 
-    @DebugLog
     @Subscribe
     public void onEvent(SuggestDialogNoEvent event) {
         ratingHelper.onDontAskAgain();
     }
 
-    @DebugLog
     @Subscribe
     public void onEvent(RatingDialogYesEvent event) {
         ratingHelper.onRate();
     }
 
-    @DebugLog
     @Subscribe
     public void onEvent(RatingDialogLaterEvent event) {
         ratingHelper.onRateLater();
     }
 
-    @DebugLog
     @Subscribe
     public void onEvent(RatingDialogNoEvent event) {
         ratingHelper.onDontAskAgain();

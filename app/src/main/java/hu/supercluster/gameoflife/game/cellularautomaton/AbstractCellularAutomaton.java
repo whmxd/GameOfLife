@@ -12,7 +12,6 @@ import hu.supercluster.gameoflife.game.grid.GridHandler;
 import hu.supercluster.gameoflife.game.rule.Rule;
 import hu.supercluster.gameoflife.game.transformer.GridTransformer;
 import hu.supercluster.gameoflife.game.transformer.ThreadedGridTransformer;
-import hugo.weaving.DebugLog;
 
 abstract class AbstractCellularAutomaton<T extends Cell> implements CellularAutomaton<T> {
     protected int gridSizeX;
@@ -110,7 +109,6 @@ abstract class AbstractCellularAutomaton<T extends Cell> implements CellularAuto
     }
 
     @Override
-    @DebugLog
     public void setState(Grid<T> grid) {
         gridHandler.setCurrent(grid);
     }

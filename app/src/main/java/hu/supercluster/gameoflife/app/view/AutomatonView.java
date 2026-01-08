@@ -10,7 +10,6 @@ import hu.supercluster.gameoflife.game.cellularautomaton.CellularAutomaton;
 import hu.supercluster.gameoflife.game.event.PaintWithBrush;
 import hu.supercluster.gameoflife.game.manager.GameParams;
 import hu.supercluster.gameoflife.util.EventBus;
-import hugo.weaving.DebugLog;
 
 public class AutomatonView extends SurfaceView implements SurfaceHolder.Callback {
     private CellularAutomaton automaton;
@@ -29,7 +28,6 @@ public class AutomatonView extends SurfaceView implements SurfaceHolder.Callback
         super(context, attrs, defStyle);
     }
 
-    @DebugLog
     public void init(CellularAutomaton automaton, GameParams params) {
         this.automaton = automaton;
         this.params = params;
@@ -39,7 +37,6 @@ public class AutomatonView extends SurfaceView implements SurfaceHolder.Callback
     }
 
     @Override
-    @DebugLog
     public void surfaceCreated(SurfaceHolder holder) {
         if (thread == null || thread.getState() == Thread.State.TERMINATED) {
             thread = new AutomatonThread(automaton, holder, params);
@@ -55,13 +52,11 @@ public class AutomatonView extends SurfaceView implements SurfaceHolder.Callback
     }
 
     @Override
-    @DebugLog
     public void surfaceDestroyed(SurfaceHolder holder) {
         thread.setRunning(false);
         waitForThreadToDie();
     }
 
-    @DebugLog
     private void waitForThreadToDie() {
         while (true) {
             try {

@@ -1,11 +1,12 @@
 package hu.supercluster.gameoflife.app.util;
 
 import android.graphics.Point;
-import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.EBean;

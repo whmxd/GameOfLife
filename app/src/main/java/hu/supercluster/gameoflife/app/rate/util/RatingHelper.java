@@ -11,8 +11,8 @@ import org.androidannotations.annotations.RootContext;
 import org.androidannotations.annotations.sharedpreferences.Pref;
 
 import hu.supercluster.gameoflife.BuildConfig;
+import hu.supercluster.gameoflife.app.rate.prefs.RatePrefs;
 import hu.supercluster.gameoflife.app.rate.prefs.RatePrefs_;
-import hugo.weaving.DebugLog;
 
 @EBean
 public class RatingHelper {
@@ -22,12 +22,11 @@ public class RatingHelper {
     Activity activity;
 
     @Pref
-    RatePrefs_ ratePrefs;
+	RatePrefs_ ratePrefs;
 
     @Bean
     RatingDialogHelper ratingDialogHelper;
 
-    @DebugLog
     public void increaseStartupCount() {
         ratePrefs.totalStartupCount().put(ratePrefs.totalStartupCount().get() + 1);
         ratePrefs.currentStartupCount().put(ratePrefs.currentStartupCount().get() + 1);
@@ -68,7 +67,6 @@ public class RatingHelper {
         }
     }
 
-    @DebugLog
     private String getReleasePackageName() {
         String packageName = activity.getPackageName();
         String buildType = BuildConfig.BUILD_TYPE;
@@ -82,7 +80,6 @@ public class RatingHelper {
         return packageName;
     }
 
-    @DebugLog
     private Intent getViewIntent(Uri uri) {
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         setFlags(intent);
@@ -98,18 +95,15 @@ public class RatingHelper {
         );
     }
 
-    @DebugLog
     public void onRated() {
         ratePrefs.shouldAskAgain().put(false);
     }
 
-    @DebugLog
     public void onRateLater() {
         ratePrefs.shouldAskAgain().put(true);
         ratePrefs.currentStartupCount().put(0);
     }
 
-    @DebugLog
     public void onDontAskAgain() {
         ratePrefs.shouldAskAgain().put(false);
     }

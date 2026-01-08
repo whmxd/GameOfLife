@@ -1,6 +1,6 @@
 package hu.supercluster.gameoflife.app.preset;
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 import hu.supercluster.gameoflife.R;
 

@@ -1,49 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+	android:id="@+id/activity_main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#000000"
+	android:fitsSystemWindows="true">
 
-    <hu.supercluster.gameoflife.app.view.AutomatonView
-        android:id="@+id/automatonView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+	<hu.supercluster.gameoflife.app.view.AutomatonView
+		android:id="@+id/automatonView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        style="@style/toolbar">
+	<LinearLayout
+		style="@style/toolbar"
+		android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/restart"
-            android:src="@drawable/ic_restart"
-            style="@style/button"
-        />
+		<ImageButton
+			android:id="@+id/restart"
+			style="@style/button"
+			android:src="@drawable/ic_restart" />
 
-        <ImageButton
-            android:id="@+id/reset"
-            android:src="@drawable/ic_bin"
-            style="@style/button"
-        />
+		<ImageButton
+			android:id="@+id/reset"
+			style="@style/button"
+			android:src="@drawable/ic_bin" />
 
-        <ImageButton
-            android:id="@+id/changeRules"
-            android:src="@drawable/ic_settings"
-            style="@style/button"
-        />
+		<ImageButton
+			android:id="@+id/changeRules"
+			style="@style/button"
+			android:src="@drawable/ic_settings" />
 
-        <ImageButton
-            android:id="@+id/pause"
-            android:src="@drawable/ic_pause"
-            style="@style/button"
-            />
+		<ImageButton
+			android:id="@+id/pause"
+			style="@style/button"
+			android:src="@drawable/ic_pause" />
 
-        <ImageButton
-            android:id="@+id/resume"
-            android:src="@drawable/ic_play"
-            android:visibility="gone"
-            style="@style/button"
-        />
-    </LinearLayout>
+		<ImageButton
+			android:id="@+id/resume"
+			style="@style/button"
+			android:src="@drawable/ic_play"
+			android:visibility="gone" />
+	</LinearLayout>
 </RelativeLayout>

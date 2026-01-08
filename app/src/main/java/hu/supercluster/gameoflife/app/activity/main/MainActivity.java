@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
@@ -14,11 +16,10 @@ import org.androidannotations.annotations.ViewById;
 
 import hu.supercluster.gameoflife.R;
 import hu.supercluster.gameoflife.app.view.AutomatonView;
-import hugo.weaving.DebugLog;
 
 @EActivity(R.layout.activity_main)
 @Fullscreen
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     @InstanceState
     boolean paused;
 
@@ -44,7 +45,6 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    @DebugLog
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         gameState = presenter.saveGameState();

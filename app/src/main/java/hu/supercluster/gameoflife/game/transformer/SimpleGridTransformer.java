@@ -3,7 +3,6 @@ package hu.supercluster.gameoflife.game.transformer;
 import hu.supercluster.gameoflife.game.cell.Cell;
 import hu.supercluster.gameoflife.game.grid.Grid;
 import hu.supercluster.gameoflife.game.rule.Rule;
-import hugo.weaving.DebugLog;
 
 public class SimpleGridTransformer<T extends Cell> implements GridTransformer<T> {
     private int[][] stateChanges;
@@ -15,7 +14,6 @@ public class SimpleGridTransformer<T extends Cell> implements GridTransformer<T>
         applyNewGrid(grid);
     }
 
-    @DebugLog
     protected void computeNewGrid(Grid<T> grid, Rule<T> rule) {
         for (int j = 0; j < grid.getSizeY(); j++) {
             for (int i = 0; i < grid.getSizeX(); i++) {
@@ -24,7 +22,6 @@ public class SimpleGridTransformer<T extends Cell> implements GridTransformer<T>
         }
     }
 
-    @DebugLog
     protected void applyNewGrid(Grid<T> grid) {
         for (int j = 0; j < grid.getSizeY(); j++) {
             for (int i = 0; i < grid.getSizeX(); i++) {

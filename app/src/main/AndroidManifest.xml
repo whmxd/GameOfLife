@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="hu.supercluster.gameoflife">
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,13 +11,10 @@
         android:icon="@mipmap/ic_launcher"
         android:logo="@mipmap/ic_launcher"
         android:allowBackup="true"
-        tools:replace="label, icon">
+		tools:replace="android:label">
 
-        <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="77d88cafce645aa494763063fee2e7959f1a1b3f" />
-
-        <activity android:name=".app.activity.main.MainActivity_">
+        <activity android:name=".app.activity.main.MainActivity_"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
