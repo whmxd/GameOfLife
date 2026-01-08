@@ -11,7 +11,6 @@ import org.androidannotations.annotations.RootContext;
 import org.androidannotations.annotations.sharedpreferences.Pref;
 
 import hu.supercluster.gameoflife.BuildConfig;
-import hu.supercluster.gameoflife.app.rate.prefs.RatePrefs;
 import hu.supercluster.gameoflife.app.rate.prefs.RatePrefs_;
 
 @EBean
@@ -41,7 +40,8 @@ public class RatingHelper {
             if (totalStartupCount > currentStartupCount) {
                 ratingDialogHelper.displayRatingDialog();
             } else {
-                ratingDialogHelper.displaySuggestDialog();
+//				// hide suggest
+//                ratingDialogHelper.displaySuggestDialog();
             }
         }
     }

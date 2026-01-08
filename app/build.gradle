@@ -25,10 +25,10 @@ android {
 
 	defaultConfig {
 		applicationId 'hu.supercluster.gameoflife'
-		minSdk 21
+		minSdk 14
 		targetSdkVersion 36
 		versionCode getGitCommitCount()
-		versionName "1.0.0"
+		versionName "1.0.1"
 		multiDexEnabled true
 
 		javaCompileOptions {
@@ -59,10 +59,10 @@ android {
         release {
             resValue "string", "app_name_for_buildtype", "Game of Life"
 			minifyEnabled true
-			shrinkResources true //开启删除无用资源
-			debuggable false //是否支持调试
-			zipAlignEnabled true //是否开启zip压缩
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			shrinkResources true
+			debuggable false
+			zipAlignEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
     }
 

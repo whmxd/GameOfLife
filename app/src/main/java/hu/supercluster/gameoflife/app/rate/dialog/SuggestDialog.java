@@ -36,8 +36,7 @@ public class SuggestDialog extends DialogFragment {
                         EventBus.getInstance().post(new SuggestDialogNoEvent());
                         dialog.cancel();
                     }
-                })
-        ;
+                });
 
         return builder.create();
     }
